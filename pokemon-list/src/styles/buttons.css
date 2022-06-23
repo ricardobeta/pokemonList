@@ -1,0 +1,9 @@
+.Button{
+    width: 15rem;
+    height: 40px;
+    background: #1d3557;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}

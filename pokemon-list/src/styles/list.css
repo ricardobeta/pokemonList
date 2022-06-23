@@ -1,0 +1,23 @@
+.ContainerList {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    width: 100%;
+    height: 97%;
+}
+
+.SearchInput{
+    width: 100%;
+    height: 30px;
+}
+
+.ContainerItems {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+}

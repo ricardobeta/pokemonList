@@ -1,2 +1,3 @@
-# pokemonList
- 
+# Pokemon List
+## **Autor: Ricardo Betancourt**
+

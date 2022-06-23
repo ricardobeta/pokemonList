@@ -1,0 +1,23 @@
+.ContainerPokemon {
+    width: 35%;
+    height: 40%;
+    border: 2px solid #457b9d;
+    background: #a8dadc;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.PokemonImg{
+    width: 60% ;
+}
+
+p{
+    margin-block-start: 5px ;
+    margin-block-end: 5px;
+    font-size: 25px;
+}

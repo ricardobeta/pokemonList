@@ -1,0 +1,36 @@
+.ContainerInfo {
+    display: flex;
+    height: 81%;
+    min-width: 240px;
+    width: 60%;
+    background: #457b9d;
+    margin-right: 15px;
+    border: 3px solid #1d3557;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.MoreInfo {
+    width: 100%;
+    text-align: left;
+}
+
+
+.SubTitleInfo {
+    font-weight: bold;  
+    margin-left: 15px;  
+}
+
+.ContentInfo {
+    font-size: 20px;
+    margin-left: 15px;  
+}
+
+.Sprites{
+    width: 60px;
+}
+
+.PrincipalImg{
+    width: 40%;
+}

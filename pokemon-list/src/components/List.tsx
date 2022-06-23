@@ -11,7 +11,8 @@ export const List = () => {
     const  {getPokemonList} = usePokemon();
     const [searchParams, setSearchParams] = useSearchParams();
     const [pokemonsItems, setPokemonsItems] = useState<JSX.Element[]>([]);
-    const {setName} =useContext(Context)
+    const {setName, setPaginationC} =useContext(Context)
+    
 
 
     useEffect(() => {
@@ -19,7 +20,12 @@ export const List = () => {
         if(actual != null) {
             console.log()
             getPokemonList(Number.parseInt(actual)).then(
-                result => mapperItems(result.results)
+                result => {
+                    mapperItems(result.results)
+                    const next =result.next != null && result.next != undefined ;
+                    const back =result.previous != null && result.previous != undefined
+                    setPaginationC(next , back )
+                }
             )
         } else {
             setSearchParams('page=1')

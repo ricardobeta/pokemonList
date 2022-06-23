@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useSearchParams } from 'react-router-dom';
+import { Context } from '../context/Context';
 import "../styles/buttons.css"
 export const PaginationButtons = () => {
 
 
     let [searchParams, setSearchParams] = useSearchParams();
+    const {state} =useContext(Context)
 
 
     const next = () => {
@@ -20,8 +22,14 @@ export const PaginationButtons = () => {
 
   return (
     <>
-    <button onClick={() => back()} className="Button"> Atrás </button>
-    <button onClick={() => next()} className="Button"> Siguiente </button>
+    {
+      state.back?<button onClick={() => back()} className="Button"> Atrás </button>:<div></div>
+    }
+    
+    {
+      state.next?<button onClick={() => next()} className="Button"> Siguiente </button>:null
+    }
+    
     </>
   )
 }

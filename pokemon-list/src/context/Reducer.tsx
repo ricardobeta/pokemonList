@@ -1,16 +1,24 @@
 import { State } from "./Context";
 
 
-type UpdatedName = {
+type UpdatedContext = {
     type: 'updatedName',
     payload: string
+} | {
+    type: 'updatedPaginationController',
+    payload: {
+        next: boolean,
+        back: boolean
+    }
 }
 
 
-export const MyReducer = ( state: State, action: UpdatedName):State => {
+export const MyReducer = ( state: State, action: UpdatedContext):State => {
     switch (action.type) {
         case 'updatedName':
             return {...state, name: action.payload}
+        case 'updatedPaginationController':
+            return {...state, ...action.payload}
         default:
             return state
     }
